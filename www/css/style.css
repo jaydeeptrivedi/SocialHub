@@ -1,0 +1,11 @@
+/* Empty. Add your own CSS if you like */
+div.true{
+    color: #4cd964;
+    display: inline-block;
+    float: right;
+}
+div.false{
+    color: #e42012;
+    display: inline-block;
+    float: right;
+}

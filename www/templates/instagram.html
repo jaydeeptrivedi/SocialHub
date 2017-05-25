@@ -1,0 +1,96 @@
+<ion-view view-title="Social Hub" class="bar-assertive">
+    <ion-content>
+        <div>
+            <div class="padding">
+                <button ng-click="login()" class="button button-block button-outline button-positive">
+                    Sign In
+                </button>
+            </div>
+            <div class="list card">
+                <div class="item item-avatar item-text-wrap">
+                    <img ng-src="{{profile.data.profile_picture}}">
+                    <h2>{{profile.data.full_name}}</h2>
+                    <p>{{profile.data.bio}}</p>
+                </div>
+                <a href="#" class="item item-icon-left" ng-show="profile.data.website">
+                    <i class="icon ion-earth"></i>
+                    {{profile.data.website}}
+                </a>
+                <a href="#" class="item item-icon-left" ng-show="profile.data.counts.follows">
+                    <i class="icon ion-heart"></i>
+                    {{profile.data.counts.follows}}
+                </a>
+                <a href="#" class="item item-icon-left" ng-show="profile.data.counts.followed_by">
+                    <i class="icon ion-ios-people"></i>
+                    {{profile.data.counts.followed_by}}
+                </a>
+                <a href="#" class="item item-icon-left" ng-show="profile.data.counts.media">
+                    <i class="icon ion-images"></i>
+                    {{profile.data.counts.media}}
+                </a>
+            </div>
+            <div class="list card">
+                <a href="#" class="item item-icon-left">
+                    <i class="icon ion-pound"></i>
+                    {{uploads.mostUsedTags}}
+                </a>
+            </div>
+            <div class="list card">
+                <a class="item item-icon-left " href="#">
+                    <i class="icon ion-image"></i>Most recent upload
+                </a>
+
+                <div class="item item-image">
+                    <img src="{{uploads.data[0].images.standard_resolution.url}}">
+                </div>
+
+                <a class="item" href="#">
+                    <span class="item-icon-left">
+                        <i class="icon ion-heart assertive"><span style="color:black">{{uploads.data[0].likes.count}}</span></i>
+                    </span>
+                    <span class="item-icon-right">
+                        <i class="icon ion-chatbubble assertive"><span style="color:black">{{uploads.data[0].comments.count}}</span></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="list card">
+                <a class="item item-icon-left " href="#">
+                    <i class="icon ion-image"></i>Most liked upload
+                </a>
+
+                <div class="item item-image">
+                    <img src="{{uploads.mostLikedUpload.images.standard_resolution.url}}">
+                </div>
+
+                <a class="item" href="#">
+                    <span class="item-icon-left">
+                        <i class="icon ion-heart assertive"><span style="color:black">{{uploads.mostLikedUpload.likes.count}}</span></i>
+                    </span>
+                    <span class="item-icon-right">
+                        <i class="icon ion-chatbubble assertive"><span style="color:black">{{uploads.mostLikedUpload.comments.count}}</span></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="list card">
+                <a class="item item-icon-left " href="#">
+                    <i class="icon ion-image"></i>Most commented upload
+                </a>
+
+                <div class="item item-image">
+                    <img src="{{uploads.mostCommentedUpload.images.standard_resolution.url}}">
+                </div>
+
+                <a class="item" href="#">
+                    <span class="item-icon-left">
+                        <i class="icon ion-heart assertive"><span style="color:black">{{uploads.mostCommentedUpload.likes.count}}</span></i>
+                    </span>
+                    <span class="item-icon-right">
+                        <i class="icon ion-chatbubble assertive"><span style="color:black">{{uploads.mostCommentedUpload.comments.count}}</span></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

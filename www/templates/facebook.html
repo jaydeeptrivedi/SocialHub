@@ -1,0 +1,158 @@
+<ion-view view-title="Social Hub" class="bar-positive">
+    <ion-content>
+        <div class="padding">
+            <button ng-click="login()" class="button button-block button-outline button-positive">Sign In</button>
+        </div>
+        <div class="list card">
+            <div class="item item-avatar">
+                <img ng-src="{{profileData.picture.data.url}}">
+                <h2>{{profileData.name}}</h2>
+                <p>{{profileData.birthday}}</p>
+            </div>
+            <a href="#" class="item item-icon-left" ng-show="profileData.website">
+                <i class="icon ion-earth"></i>
+                {{profileData.website}}
+            </a>
+            <a href="#" class="item item-icon-left" ng-show="profileData.location.name">
+                <i class="icon ion-home"></i>
+                {{profileData.location.name}}
+            </a>
+            <a href="#" class="item item-icon-left" ng-show="profileData.relationship_status">
+                <i class="icon ion-heart"></i>
+                {{profileData.relationship_status}}
+            </a>
+        </div>
+        <!--<ion-slide-box delegate-handle="slide-box-keymetrics" pager-click="changeSlide(index)"-->
+                       <!--on-slide-changed="slideChangeCallback($index)"-->
+                       <!--show-pager="true">-->
+            <!--<ion-slide>-->
+                <!-- -->
+            <!--</ion-slide>-->
+            <!--<ion-slide>-->
+
+            <!--</ion-slide>-->
+        <!--</ion-slide-box>-->
+        <div class="list card">
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-document-text"></i>Most liked status update
+            </a>
+
+            <div class="item item-text-wrap">
+                <p>{{profileData.mostLikedStatus.message}}</p>
+            </div>
+
+            <a class="item" href="#">
+                    <span class="item-icon-left">
+                        <i class="icon ion-thumbsup positive"><span style="color:black">{{profileData.mostLikedStatus.likes.summary.total_count}}</span></i>
+                    </span>
+                    <!--<span class="item-icon">-->
+                        <!--<i class="icon ion-calendar positive"><span style="color:black">{{profileData.mostLikedStatus.created_time}}</span></i>-->
+                    <!--</span>-->
+                    <span class="item-icon-right">
+                        <i class="icon ion-chatbubble positive"><span style="color:black">{{profileData.mostLikedStatus.comments.summary.total_count}}</span></i>
+                    </span>
+            </a>
+        </div>
+        <div class="list card">
+            <a class="item item-icon-left " href="#">
+                <i class="icon ion-document-text"></i>Most commented status update
+            </a>
+
+            <div class="item item-text-wrap">
+                <p>{{profileData.mostCommentedStatus.message}}</p>
+            </div>
+
+            <a class="item" href="#">
+                    <span class="item-icon-left">
+                        <i class="icon ion-thumbsup positive"><span style="color:black">{{profileData.mostCommentedStatus.likes.summary.total_count}}</span></i>
+                    </span>
+                    <!--<span class="item-icon">-->
+                        <!--<i class="icon ion-calendar positive"><span style="color:black">{{profileData.mostCommentedStatus.created_time}}</span></i>-->
+                    <!--</span>-->
+                    <span class="item-icon-right">
+                        <i class="icon ion-chatbubble positive"><span style="color:black">{{profileData.mostCommentedStatus.comments.summary.total_count}}</span></i>
+                    </span>
+            </a>
+        </div>
+        <div class="list card">
+            <a class="item item-icon-left " href="#">
+                <i class="icon ion-image"></i>Most liked profile picture
+            </a>
+
+            <div class="item item-image">
+                <img src="{{profileData.mostLikedProfilePic.images[0].source}}">
+            </div>
+
+            <a class="item" href="#">
+                    <span class="item-icon-left positive">
+                        <i class="icon ion-thumbsup positive"><span style="color:black">{{profileData.mostLikedProfilePic.likes.summary.total_count}}</span></i>
+                    </span>
+                    <span class="item-icon-right">
+                        <i class="icon ion-chatbubble positive"><span style="color:black">{{profileData.mostLikedProfilePic.comments.summary.total_count}}</span></i>
+                    </span>
+            </a>
+        </div>
+        <div class="list card">
+            <a class="item item-icon-left " href="#">
+                <i class="icon ion-image"></i>Most commented profile picture
+            </a>
+
+            <div class="item item-image">
+                <img src="{{profileData.mostCommentedProfilePic.images[0].source}}">
+            </div>
+
+            <a class="item" href="#">
+                    <span class="item-icon-left">
+                        <i class="icon ion-thumbsup positive"><span style="color:black">{{profileData.mostCommentedProfilePic.likes.summary.total_count}}</span></i>
+                    </span>
+                    <span class="item-icon-right">
+                        <i class="icon ion-chatbubble positive"><span style="color:black">{{profileData.mostCommentedProfilePic.comments.summary.total_count}}</span></i>
+                    </span>
+            </a>
+        </div>
+        <div class="list card">
+            <a class="item item-icon-left " href="#">
+                <i class="icon ion-image"></i>Most liked cover picture
+            </a>
+
+            <div class="item item-image">
+                <img src="{{profileData.mostLikedCoverPic.images[0].source}}">
+            </div>
+
+            <a class="item" href="#">
+                    <span class="item-icon-left">
+                        <i class="icon ion-thumbsup positive"><span style="color:black">{{profileData.mostLikedCoverPic.likes.summary.total_count}}</span></i>
+                    </span>
+                    <span class="item-icon-right">
+                        <i class="icon ion-chatbubble positive"><span style="color:black">{{profileData.mostLikedCoverPic.comments.summary.total_count}}</span></i>
+                    </span>
+            </a>
+        </div>
+        <div class="list card">
+            <a class="item item-icon-left " href="#">
+                <i class="icon ion-image"></i>Most commented cover picture
+            </a>
+
+            <div class="item item-image">
+                <img src="{{profileData.mostCommentedCoverPic.images[0].source}}">
+            </div>
+
+            <div class="item">
+                <span class="item-icon-left">
+                    <a href="#">
+                        <i class="icon ion-thumbsup positive"><span style="color:black">{{profileData.mostCommentedCoverPic.likes.summary.total_count}}</span></i>
+                    </a>
+                </span>
+
+                <span class="item-icon-right">
+                    <a href="#">
+                        <i class="icon ion-chatbubble positive"><span style="color:black">{{profileData.mostCommentedCoverPic.comments.summary.total_count}}</span></i>
+                    </a>
+                </span>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+

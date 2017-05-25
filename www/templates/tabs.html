@@ -1,0 +1,25 @@
+<!--
+Create tabs with an icon and label, using the tabs-balanced style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-striped tabs-color-light tabs-background-positive">
+
+
+  <ion-tab title="Facebook" icon-off="ion-social-facebook-outline" icon-on="ion-social-facebook" href="#/tab/facebook">
+    <ion-nav-view name="facebook"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Instagram" icon-off="ion-social-instagram-outline" icon-on="ion-social-instagram" href="#/tab/instagram">
+    <ion-nav-view name="instagram"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Twitter" icon-off="ion-social-twitter-outline" icon-on="ion-social-twitter" href="#/tab/twitter">
+    <ion-nav-view name="twitter"  class="{{nav_bar_style||'bar-positive'}}"></ion-nav-view>
+  </ion-tab>
+
+
+
+
+
+</ion-tabs>
